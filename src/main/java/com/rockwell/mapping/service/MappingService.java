@@ -8,6 +8,8 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.rockwell.mapping.dto.MappingResponse;
@@ -16,6 +18,7 @@ import com.rockwell.mapping.dto.NumberMappingResponse;
 @Service
 public class MappingService {
 
+    private static final Logger logger = LoggerFactory.getLogger(MappingService.class);
     private final Map<String, Map<Integer, String>> mappings;
 
     public MappingService() {
@@ -23,8 +26,10 @@ public class MappingService {
     }
 
     public MappingResponse processMapping(String mappingName, List<Integer> numbers) {
+        logger.info("Processing request for mapping: '{}'" , mappingName);
         Map<Integer, String> mapping = mappings.get(mappingName);
         if (mapping == null) {
+            logger.warn("Mapping '{}' not found", mappingName);
             throw new IllegalArgumentException("Mapping '" + mappingName + "' not found. Available mappings: " + 
                 String.join(", ", mappings.keySet()));
         }
