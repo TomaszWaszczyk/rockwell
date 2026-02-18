@@ -58,36 +58,36 @@ public class MappingService {
         Map<String, Map<Integer, String>> allMappings = new HashMap<>();
 
         // Mapping 1: Animals
-        allMappings.put("Animals", createAnimalsMapping());
+        allMappings.put("Animals", Map.copyOf(createAnimalsMapping()));
 
         // Mapping 2: Furniture
-        allMappings.put("Furniture", createFurnitureMapping());
+        allMappings.put("Furniture", Map.copyOf(createFurnitureMapping()));
 
         // Mapping 3: Colors
-        allMappings.put("Colors", createColorsMapping());
+        allMappings.put("Colors", Map.copyOf(createColorsMapping()));
 
         // Mapping 4: Fruits
-        allMappings.put("Fruits", createFruitsMapping());
+        allMappings.put("Fruits", Map.copyOf(createFruitsMapping()));
 
         // Mapping 5: Vehicles
-        allMappings.put("Vehicles", createVehiclesMapping());
+        allMappings.put("Vehicles", Map.copyOf(createVehiclesMapping()));
 
         // Mapping 6: Sports
-        allMappings.put("Sports", createSportsMapping());
+        allMappings.put("Sports", Map.copyOf(createSportsMapping()));
 
         // Mapping 7: Instruments
-        allMappings.put("Instruments", createInstrumentsMapping());
+        allMappings.put("Instruments", Map.copyOf(createInstrumentsMapping()));
 
         // Mapping 8: Countries
-        allMappings.put("Countries", createCountriesMapping());
+        allMappings.put("Countries", Map.copyOf(createCountriesMapping()));
 
         // Mapping 9: Professions
-        allMappings.put("Professions", createProfessionsMapping());
+        allMappings.put("Professions", Map.copyOf(createProfessionsMapping()));
 
         // Mapping 10: Planets
-        allMappings.put("Planets", createPlanetsMapping());
+        allMappings.put("Planets", Map.copyOf(createPlanetsMapping()));
 
-        return allMappings;
+        return Map.copyOf(allMappings);
     }
 
     private Map<Integer, String> createAnimalsMapping() {
