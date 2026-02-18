@@ -29,8 +29,8 @@ class MappingServiceTest {
         MappingResponse response = mappingService.processMapping("Animals", numbers);
 
         assertNotNull(response);
-        assertEquals("Animals", response.getMappingName());
-        assertEquals(3, response.getResults().size());
+        assertEquals("Animals", response.mappingName());
+        assertEquals(3, response.results().size());
     }
 
     @Test
@@ -39,8 +39,8 @@ class MappingServiceTest {
         MappingResponse response = mappingService.processMapping("Furniture", numbers);
 
         assertNotNull(response);
-        assertEquals("Furniture", response.getMappingName());
-        assertEquals(2, response.getResults().size());
+        assertEquals("Furniture", response.mappingName());
+        assertEquals(2, response.results().size());
     }
 
     @Test
@@ -61,11 +61,11 @@ class MappingServiceTest {
         List<Integer> numbers = Arrays.asList(6);
         MappingResponse response = mappingService.processMapping("Animals", numbers);
 
-        NumberMappingResponse result = response.getResults().get(0);
-        assertEquals(6, result.getNumber());
+        NumberMappingResponse result = response.results().get(0);
+        assertEquals(6, result.number());
         // 6 has divisors: 1, 2, 3, 6
-        assertEquals(4, result.getDivisors().size());
-        assertTrue(result.getDivisors().containsAll(Arrays.asList(1, 2, 3, 6)));
+        assertEquals(4, result.divisors().size());
+        assertTrue(result.divisors().containsAll(Arrays.asList(1, 2, 3, 6)));
     }
 
     @Test
@@ -73,11 +73,11 @@ class MappingServiceTest {
         List<Integer> numbers = Arrays.asList(4);
         MappingResponse response = mappingService.processMapping("Animals", numbers);
 
-        NumberMappingResponse result = response.getResults().get(0);
+        NumberMappingResponse result = response.results().get(0);
         // 4 has divisors: 1, 2, 4
-        assertTrue(result.getDivisors().containsAll(Arrays.asList(1, 2, 4)));
+        assertTrue(result.divisors().containsAll(Arrays.asList(1, 2, 4)));
         // Should have mapped words for these divisors
-        assertFalse(result.getMappedWords().isEmpty());
+        assertFalse(result.mappedWords().isEmpty());
     }
 
     @Test
@@ -85,10 +85,10 @@ class MappingServiceTest {
         List<Integer> numbers = Arrays.asList(1);
         MappingResponse response = mappingService.processMapping("Animals", numbers);
 
-        assertEquals(1, response.getResults().size());
-        NumberMappingResponse result = response.getResults().get(0);
-        assertEquals(1, result.getNumber());
-        assertTrue(result.getDivisors().contains(1));
+        assertEquals(1, response.results().size());
+        NumberMappingResponse result = response.results().get(0);
+        assertEquals(1, result.number());
+        assertTrue(result.divisors().contains(1));
     }
 
     @Test
@@ -96,10 +96,10 @@ class MappingServiceTest {
         List<Integer> numbers = Arrays.asList(2, 3, 5);
         MappingResponse response = mappingService.processMapping("Animals", numbers);
 
-        assertEquals(3, response.getResults().size());
-        assertEquals(2, response.getResults().get(0).getNumber());
-        assertEquals(3, response.getResults().get(1).getNumber());
-        assertEquals(5, response.getResults().get(2).getNumber());
+        assertEquals(3, response.results().size());
+        assertEquals(2, response.results().get(0).number());
+        assertEquals(3, response.results().get(1).number());
+        assertEquals(5, response.results().get(2).number());
     }
 
     @Test
@@ -131,9 +131,9 @@ class MappingServiceTest {
         List<Integer> numbers = Arrays.asList(1);
         MappingResponse response = mappingService.processMapping("Animals", numbers);
 
-        NumberMappingResponse result = response.getResults().get(0);
-        assertEquals(1, result.getDivisors().size());
-        assertEquals(1, result.getDivisors().get(0).intValue());
+        NumberMappingResponse result = response.results().get(0);
+        assertEquals(1, result.divisors().size());
+        assertEquals(1, result.divisors().get(0).intValue());
     }
 
     @Test
@@ -141,9 +141,9 @@ class MappingServiceTest {
         List<Integer> numbers = Arrays.asList(5);
         MappingResponse response = mappingService.processMapping("Animals", numbers);
 
-        NumberMappingResponse result = response.getResults().get(0);
-        assertEquals(2, result.getDivisors().size());
-        assertTrue(result.getDivisors().containsAll(Arrays.asList(1, 5)));
+        NumberMappingResponse result = response.results().get(0);
+        assertEquals(2, result.divisors().size());
+        assertTrue(result.divisors().containsAll(Arrays.asList(1, 5)));
     }
 
     @Test
@@ -151,9 +151,9 @@ class MappingServiceTest {
         List<Integer> numbers = Arrays.asList(12);
         MappingResponse response = mappingService.processMapping("Animals", numbers);
 
-        NumberMappingResponse result = response.getResults().get(0);
+        NumberMappingResponse result = response.results().get(0);
         // 12 has divisors: 1, 2, 3, 4, 6, 12
-        assertEquals(6, result.getDivisors().size());
+        assertEquals(6, result.divisors().size());
     }
 
     @Test
@@ -164,8 +164,8 @@ class MappingServiceTest {
         for (String mappingName : mappings) {
             MappingResponse response = mappingService.processMapping(mappingName, testNumbers);
             assertNotNull(response);
-            assertEquals(mappingName, response.getMappingName());
-            assertEquals(3, response.getResults().size());
+            assertEquals(mappingName, response.mappingName());
+            assertEquals(3, response.results().size());
         }
     }
 }

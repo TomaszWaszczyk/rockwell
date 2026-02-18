@@ -29,8 +29,8 @@ public class MappingController {
         try {
             validateRequest(request);
             MappingResponse response = mappingService.processMapping(
-                request.getMappingName(), 
-                request.getNumbers()
+                request.mappingName(), 
+                request.numbers()
             );
             return ResponseEntity.ok(response);
         } catch (IllegalArgumentException e) {
@@ -46,13 +46,13 @@ public class MappingController {
     }
 
     private void validateRequest(MappingRequest request) {
-        if (request.getMappingName() == null || request.getMappingName().trim().isEmpty()) {
+        if (request.mappingName() == null || request.mappingName().trim().isEmpty()) {
             throw new IllegalArgumentException("Mapping name is required");
         }
-        if (request.getNumbers() == null || request.getNumbers().isEmpty()) {
+        if (request.numbers() == null || request.numbers().isEmpty()) {
             throw new IllegalArgumentException("Numbers list cannot be empty");
         }
-        for (Integer number : request.getNumbers()) {
+        for (Integer number : request.numbers()) {
             if (number == null || number < 1 || number > 20) {
                 throw new IllegalArgumentException("Numbers must be in range 1-20");
             }

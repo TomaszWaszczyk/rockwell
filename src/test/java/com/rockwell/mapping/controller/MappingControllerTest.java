@@ -35,8 +35,8 @@ class MappingControllerTest {
 
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertNotNull(response.getBody());
-        assertEquals("Animals", response.getBody().getMappingName());
-        assertEquals(3, response.getBody().getResults().size());
+        assertEquals("Animals", response.getBody().mappingName());
+        assertEquals(3, response.getBody().results().size());
     }
 
     @Test
@@ -130,14 +130,14 @@ class MappingControllerTest {
 
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertNotNull(response.getBody());
-        assertNotNull(response.getBody().getMappingName());
-        assertNotNull(response.getBody().getResults());
-        assertEquals(1, response.getBody().getResults().size());
+        assertNotNull(response.getBody().mappingName());
+        assertNotNull(response.getBody().results());
+        assertEquals(1, response.getBody().results().size());
         
-        NumberMappingResponse result = response.getBody().getResults().get(0);
-        assertEquals(2, result.getNumber());
-        assertNotNull(result.getDivisors());
-        assertNotNull(result.getMappedWords());
+        NumberMappingResponse result = response.getBody().results().get(0);
+        assertEquals(2, result.number());
+        assertNotNull(result.divisors());
+        assertNotNull(result.mappedWords());
     }
 
     @Test
@@ -147,8 +147,8 @@ class MappingControllerTest {
 
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertNotNull(response.getBody());
-        assertEquals("Furniture", response.getBody().getMappingName());
-        assertEquals(3, response.getBody().getResults().size());
+        assertEquals("Furniture", response.getBody().mappingName());
+        assertEquals(3, response.getBody().results().size());
     }
 
     @Test
@@ -160,7 +160,7 @@ class MappingControllerTest {
             ResponseEntity<MappingResponse> response = mappingController.processMapping(request);
             
             assertEquals(HttpStatus.OK, response.getStatusCode());
-            assertEquals(mappingName, response.getBody().getMappingName());
+            assertEquals(mappingName, response.getBody().mappingName());
         }
     }
 
