@@ -1,3 +1,6 @@
+[![Run in Postman](https://voyager.postman.com/logo/postman-logo-icon-orange.svg)](https://app.getpostman.com/run-collection/5091521-f2beda7d-f3d9-5aac-f70f-d694ef32c174) Run in Postman
+
+
 # Rockwell Mapping Application
 
 A RESTful Spring Boot application that accepts a group of numbers and a mapping name, finds divisors for each number, and maps each divisor to a word using predefined mappings.
