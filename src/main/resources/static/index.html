@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapping Application API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 2rem 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            max-width: 600px;
+
+            ul {
+                list-style-type: none;
+                padding-left: 0;
+            }
+
+            li::before {
+                content: "- ";
+                margin-right: 0.5em;
+            }
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Mapping Application API</h1>
+        <p>Available endpoints:</p>
+        <ul>
+            <li><strong>GET /api/mapping/available</strong> – lists all supported mapping names.</li>
+            <li><strong>POST /api/mapping/process</strong> – provide a JSON body with <code>mappingName</code> and a list of <code>numbers</code> (1-20); returns divisors and mapped words.</li>
+        </ul>
+    </div>
+</body>
+</html>
