@@ -11,7 +11,7 @@
 	<groupId>com.rockwell</groupId>
 	<artifactId>mapping</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>mapping</name>
 	<description>RESTfull application</description>
 	<url/>
