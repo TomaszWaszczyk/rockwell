@@ -193,13 +193,9 @@ curl -X POST http://localhost:8080/api/mapping/process \
 
 ## Deployment
 
-### Deploy to Other Platforms
+Application is already deployed using Railway, available: [Rockwell Mapping API](https://rockwell-production.up.railway.app)
 
-The application is packaged as a WAR file, making it compatible with:
-- Apache Tomcat
-- Jetty
-- Any Java servlet container
-- Cloud platforms (AWS, Azure, GCP, Heroku, etc.)
+[Created Postman collection](https://app.getpostman.com/run-collection/5091521-f2beda7d-f3d9-5aac-f70f-d694ef32c174)
 
 ## Extensibility
 
