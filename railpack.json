@@ -1,5 +1,5 @@
 {
-  "$schema": "https://schema.railpack.com/",
+  "$schema": "https://railway.app/railpack.schema.json",
   "steps": {
     "build": {
       "commands": [
