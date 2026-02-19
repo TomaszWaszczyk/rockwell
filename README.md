@@ -1,6 +1,5 @@
 [![Run in Postman](https://voyager.postman.com/logo/postman-logo-icon-orange.svg)](https://app.getpostman.com/run-collection/5091521-f2beda7d-f3d9-5aac-f70f-d694ef32c174) [Run in Postman](https://app.getpostman.com/run-collection/5091521-f2beda7d-f3d9-5aac-f70f-d694ef32c174)
 
-
 # Rockwell Mapping Application
 
 A RESTful Spring Boot application that accepts a group of numbers and a mapping name, finds divisors for each number, and maps each divisor to a word using predefined mappings.
@@ -113,27 +112,6 @@ This will create a WAR file in the `target` directory: `mapping-0.0.1-SNAPSHOT.w
 **Using Maven:**
 ```bash
 mvn spring-boot:run
-```
-
-### Option 2: Run the WAR File
-
-After building, you can deploy the WAR file to a servlet container (e.g., Tomcat) or run it directly:
-
-```bash
-java -jar target/mapping-0.0.1-SNAPSHOT.war
-```
-
-The application will start on port 8080 by default.
-
-## Configuration
-
-The application uses `application.properties` for configuration. Default settings:
-- Application name: `mapping`
-- Server port: `8080` (Spring Boot default)
-
-To change the port, add to `src/main/resources/application.properties`:
-```properties
-server.port=8080
 ```
 
 ## Testing the Application
