@@ -1,10 +1,4 @@
-<a href="https://app.getpostman.com/run-collection/5091521-f2beda7d-f3d9-5aac-f70f-d694ef32c174" target="_blank">
-  <img src="https://voyager.postman.com/logo/postman-logo-icon-orange.svg" alt="Run in Postman" style="width: 128px; height: 32px;">
-</a>
-
-
-
-[![Run in Postman](https://run.pstmn.io/button-24.svg)](https://app.getpostman.com/run-collection/5091521-f2beda7d-f3d9-5aac-f70f-d694ef32c174)
+[![Run in Postman](https://voyager.postman.com/logo/postman-logo-icon-orange.svg)](https://app.getpostman.com/run-collection/5091521-f2beda7d-f3d9-5aac-f70f-d694ef32c174)
 
 
 # Rockwell Mapping Application
