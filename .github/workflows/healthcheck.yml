@@ -1,0 +1,15 @@
+name: 🩺 Health Check
+
+on:
+  schedule:
+    - cron: '*/59 * * * *'
+  workflow_dispatch:
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: lakuapik/gh-actions-http-status@v1
+      with:
+        sites: '["https://rockwell-production.up.railway.app/actuator/health"]'
+        expected: '[200]'
