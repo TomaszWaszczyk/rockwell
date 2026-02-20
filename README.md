@@ -175,25 +175,6 @@ Application is already deployed using Railway, available: [Rockwell Mapping API]
 
 [Created Postman collection](https://app.getpostman.com/run-collection/5091521-f2beda7d-f3d9-5aac-f70f-d694ef32c174)
 
-## Extensibility
-
-To add a new mapping:
-
-1. Add a new method in `MappingService` to create the mapping (e.g., `createNewCategoryMapping()`)
-2. Call this method in the `initializeMappings()` method
-3. Ensure all numbers from 1-20 have unique words assigned
-
-Example:
-```java
-private Map<Integer, String> createNewCategoryMapping() {
-    Map<Integer, String> mapping = new HashMap<>();
-    mapping.put(1, "Word1");
-    mapping.put(2, "Word2");
-    // ... up to 20
-    return mapping;
-}
-```
-
 ## Error Handling
 
 The application includes global exception handling:
