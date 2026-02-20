@@ -20,12 +20,7 @@ The application provides 10 different mapping setups:
 2. **Furniture** - Chair, Table, Cabinet, Bed, Sofa, etc.
 3. **Colors** - Red, Blue, Green, Yellow, Orange, etc.
 4. **Fruits** - Apple, Banana, Cherry, Date, Elderberry, etc.
-5. **Vehicles** - Car, Truck, Bus, Motorcycle, Bicycle, etc.
-6. **Sports** - Soccer, Basketball, Tennis, Baseball, Football, etc.
-7. **Instruments** - Piano, Guitar, Violin, Drums, Flute, etc.
-8. **Countries** - USA, Canada, Mexico, Brazil, Argentina, etc.
-9. **Professions** - Doctor, Teacher, Engineer, Lawyer, Nurse, etc.
-10. **Planets** - Mercury, Venus, Earth, Mars, Jupiter, etc.
+5. **Countries** - USA, Canada, Mexico, Brazil, Argentina, etc.
 
 ## API Endpoints
 
