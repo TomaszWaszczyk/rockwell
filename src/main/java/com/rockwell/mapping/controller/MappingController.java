@@ -28,7 +28,7 @@ public class MappingController {
     }
 
     @PostMapping("/process")
-    public ResponseEntity<MappingResponse> processMapping(@RequestBody MappingRequest request) {
+    public ResponseEntity<?> processMapping(@RequestBody MappingRequest request) {
         try {
             logger.info("Incoming request: mapping='{}', numberCount={}", request.mappingName(), 
                 request.numbers() != null ? request.numbers().size() : 0);
@@ -41,7 +41,8 @@ public class MappingController {
             return ResponseEntity.ok(response);
         } catch (IllegalArgumentException e) {
             logger.warn("Bad request: {}", e.getMessage());
-            return ResponseEntity.badRequest().build();
+            return ResponseEntity.badRequest().body(new ErrorResponse("Bad Request", e.getMessage()));
+
         } catch (Exception e) {
             logger.error("Unexpected error processing mapping request", e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();

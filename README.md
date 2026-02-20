@@ -178,12 +178,9 @@ The application includes global exception handling:
 - Missing required fields return 400 Bad Request
 - Server errors return 500 Internal Server Error
 
-## License
-
-This project is part of a Rockwell assignment.
-
 ## Notes
 
+- Additionally, could be a good idea to implement integration tests using `httpClient`
 - Numbers must be in the range 1-20
 - All words in each mapping are unique
 - The application is designed to be extensible for adding new mappings
