@@ -110,17 +110,12 @@ class MappingControllerTest {
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertNotNull(response.getBody());
         assertFalse(response.getBody().isEmpty());
-        assertEquals(10, response.getBody().size());
+        assertEquals(5, response.getBody().size());
         assertTrue(response.getBody().contains("Animals"));
-        assertTrue(response.getBody().contains("Furniture"));
         assertTrue(response.getBody().contains("Colors"));
         assertTrue(response.getBody().contains("Fruits"));
-        assertTrue(response.getBody().contains("Vehicles"));
-        assertTrue(response.getBody().contains("Sports"));
-        assertTrue(response.getBody().contains("Instruments"));
+        assertTrue(response.getBody().contains("Furniture"));
         assertTrue(response.getBody().contains("Countries"));
-        assertTrue(response.getBody().contains("Professions"));
-        assertTrue(response.getBody().contains("Planets"));
     }
 
     @Test

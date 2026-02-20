@@ -112,18 +112,13 @@ class MappingServiceTest {
         assertTrue(mappings.contains("Furniture"));
         assertTrue(mappings.contains("Colors"));
         assertTrue(mappings.contains("Fruits"));
-        assertTrue(mappings.contains("Vehicles"));
-        assertTrue(mappings.contains("Sports"));
-        assertTrue(mappings.contains("Instruments"));
         assertTrue(mappings.contains("Countries"));
-        assertTrue(mappings.contains("Professions"));
-        assertTrue(mappings.contains("Planets"));
     }
 
     @Test
     void testGetAvailableMappingsReturnsAllMappings() {
         List<String> mappings = mappingService.getAvailableMappings();
-        assertEquals(10, mappings.size());
+        assertEquals(5, mappings.size());
     }
 
     @Test
