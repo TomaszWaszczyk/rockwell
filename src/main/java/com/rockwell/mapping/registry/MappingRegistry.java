@@ -9,27 +9,27 @@ import com.rockwell.mapping.factory.FruitsMappingFactory;
 import com.rockwell.mapping.factory.FurnitureMappingFactory;
 
 public class MappingRegistry {
-    private final Map<String, Map<Integer, String>> mappings;
+    private final Map<String, MappingData> mappings;
 
     public MappingRegistry() {
         this.mappings = initializeMappings();
     }
 
-    private Map<String, Map<Integer, String>> initializeMappings() {
+    private Map<String, MappingData> initializeMappings() {
         return Map.of(
-            "Animals", new AnimalsMappingFactory().createMapping(),
-            "Furniture", new FurnitureMappingFactory().createMapping(),
-            "Colors", new ColorsMappingFactory().createMapping(),
-            "Fruits", new FruitsMappingFactory().createMapping(),
-            "Countries", new CountriesMappingFactory().createMapping()
+            "Animals", new MappingData(new AnimalsMappingFactory().createMapping()),
+            "Furniture", new MappingData(new FurnitureMappingFactory().createMapping()),
+            "Colors", new MappingData(new ColorsMappingFactory().createMapping()),
+            "Fruits", new MappingData(new FruitsMappingFactory().createMapping()),
+            "Countries", new MappingData(new CountriesMappingFactory().createMapping())
         );
     }
 
-    public Map<Integer, String> getMapping(String name) {
+    public MappingData getMapping(String name) {
         return mappings.get(name);
     }
 
-    public Map<String, Map<Integer, String>> getAllMappings() {
+    public Map<String, MappingData> getAllMappings() {
         return mappings;
     }
 }

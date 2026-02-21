@@ -25,12 +25,13 @@ public class MappingService {
 
     public MappingResponse processMapping(String mappingName, List<Integer> numbers) {
         logger.info("Processing request for mapping: '{}'" , mappingName);
-        Map<Integer, String> mapping = mappingRegistry.getMapping(mappingName);
-        if (mapping == null) {
+        var mappingData = mappingRegistry.getMapping(mappingName);
+        if (mappingData == null) {
             logger.warn("Mapping '{}' not found", mappingName);
             throw new IllegalArgumentException("Mapping '" + mappingName + "' not found. Available mappings: " + 
                 String.join(", ", mappingRegistry.getAllMappings().keySet()));
         }
+        Map<Integer, String> mapping = mappingData.values();
 
         List<NumberMappingResponse> results = numbers.stream()
             .map(number -> {
