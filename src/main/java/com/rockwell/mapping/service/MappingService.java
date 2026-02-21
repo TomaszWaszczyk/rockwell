@@ -13,8 +13,6 @@ import org.springframework.stereotype.Service;
 import com.rockwell.mapping.dto.MappingResponse;
 import com.rockwell.mapping.dto.NumberMappingResponse;
 import com.rockwell.mapping.registry.MappingRegistry;
-import com.rockwell.mapping.util.DivisorService;
-
 
 @Service
 public class MappingService {

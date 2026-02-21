@@ -1,4 +1,4 @@
-package com.rockwell.mapping.util;
+package com.rockwell.mapping.service;
 
 import java.util.List;
 import java.util.stream.Collectors;

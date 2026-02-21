@@ -71,7 +71,7 @@ Response:
 
 ## Prerequisites
 
-- Java 25 (as specified in pom.xml - learned that Railway.com supports the highest version of Java 21)
+- Java 21 (as specified in pom.xml - learned that Railway.com supports the highest version of Java 21)
 - Maven 3.6+ (or use the included Maven Wrapper)
 
 ## Building the Application
